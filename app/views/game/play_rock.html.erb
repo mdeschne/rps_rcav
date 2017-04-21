@@ -1,0 +1,46 @@
+<h1> You played rock . . . <h1>
+
+  <a href="/rock">Play Rock</a>
+  <a href="/paper">Play Paper</a>
+  <a href="/scissors">Play Scissors</a>
+
+  <div class="container">
+      <div class="row">
+
+          <div class="col-md-6"></div>
+
+          <div class="col-md-6"></div>
+          <img src="/rock_pic.png" height= "300">
+
+          <%
+          opp = rand(3)
+
+          if opp == 0
+          y = "rock"
+          x = "tied."
+          %>
+          <img src="/rock_pic_flip.png" height= "300">
+              <%
+          elsif opp == 1
+          y = "paper"
+          x = "lost. You are terrible at this."
+          %>
+          <img src="/paper_pic_flip.png" height= "300">
+              <%
+          else
+          y = "scissors"
+          x =  "BEAT HIM WOOHOO!"
+          %>
+          <img src="/scissors_pic_flip.png" height= "300">
+              <%
+          end
+          %>
+
+
+      </div>
+  </div>
+<!-- <img src="/rock_pic.png" height= "300">
+<img src="/paper_pic.png" height= "300">
+<img src="/scissors_pic.png" height= "300"> -->
+
+<h1> Your opponent played <%=y.to_s%>. You <%=x.to_s%> <h1>
